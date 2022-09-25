@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header class="header">
+      <div class="left-header">
+        <i class="menu ri-menu-line"></i>
+        <i class="back ri-arrow-left-line"></i>
+        <span class="header-title">Forecast</span>
+      </div>
+
+      <div class="right-header">
+        <div class="icons-wrapper">
+          <i class="favorite ri-star-s-line"></i>
+          <i class="pin ri-pushpin-line"></i>
+          <i class="more ri-more-fill"></i>
+        </div>
+
+        <div class="search-wrapper">
+          <input
+            type="text"
+            class="search-input"
+            required
+            placeholder="City or ZIP code"
+          />
+          <div class="icons">
+            <i class="clear ri-close-line"></i>
+            <i class="search ri-search-line"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- sidebar starts -->
+    <div class="container">
+      <div class="sidebar">
+        <div class="top-side">
+          <li class="link-item active">
+            <a href="#"><i class="material-icons">home</i></a>
+            <span>Home</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"><i class="material-icons">map</i></a>
+            <span>Maps</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"><i class="material-icons">water</i></a>
+            <span>Historical Weather</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"><i class="material-icons">holiday_village</i></a>
+            <span>Places</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"><i class="material-icons">newspaper</i></a>
+            <span>News</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"
+              ><i class="material-icons">sentiment_satisfied_alt</i></a
+            >
+            <span>Send Feedback</span>
+          </li>
+        </div>
+
+        <div class="bottom-side">
+          <li class="link-item">
+            <a href="#"><i class="material-icons">person_add</i></a>
+            <span>Sign in</span>
+          </li>
+
+          <li class="link-item">
+            <a href="#"><i class="material-icons">settings</i></a>
+            <span>Settings</span>
+          </li>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="weather-details">
+          <h2 class="city"></h2>
+          <div class="weather-data">
+            <h3 class="numb">--</h3>
+            <div class="weather-degree">
+              <span class="cel active">C</span>
+              <span class="far">F</span>
+            </div>
+          </div>
+          <h2 class="weather-type">unknown</h2>
+
+          <div class="weather-more">
+            <ul>
+              <li class="feel">Feels Like</li>
+            </ul>
+            <ul class="flex-row">
+              <li class="sunrise"><i class="ri-sun-fill"></i> Sunrise</li>
+              <li class="sunset"><i class="ri-moon-clear-fill"></i> Sunset</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="error-container">
+      <span class="error-message">City not found!</span>
+      <button class="ok-btn">Ok</button>
+    </div>
+
+    <!-- <div class="sound-container"> -->
+    <div class="sound">
+      <!-- <i class="sound-icon ri-volume-down-fill"></i> -->
+      <i class="material-icons volume-off" style="display: block">volume_off</i>
+      <i class="material-icons volume-on" style="display: none">volume_up</i>
+      <span class="sound-text">Sound Off</span>
+    </div>
+    <!-- </div> -->
+
+    <!-- sidebar ends -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
