@@ -234,3 +234,36 @@ sound.addEventListener('click', () => {
 errorOkBtn.addEventListener('click', () => {
   errorContainer.classList.remove('active');
 });
+
+// show search suggestions
+
+import { countries } from './countries.js';
+
+const suggetionsList = document.querySelector('.suggestions-list');
+
+searchInput.addEventListener('keyup', function () {
+  suggetionsList.style.display = 'block';
+  const input = searchInput.value;
+  suggetionsList.innerHTML = '';
+  const suggestions = countries.filter(function (country) {
+    return country.name.toLowerCase().startsWith(input);
+  });
+  suggestions.forEach((suggested) => {
+    let regx = new RegExp(`^${searchInput.value}`, 'gi');
+    const suggestion = document.createElement('li');
+    suggestion.classList.add('suggestion');
+    suggestion.innerHTML = suggested.name.replace(
+      regx,
+      (match) => `<mark>${match}</mark>`
+    );
+    suggetionsList.appendChild(suggestion);
+    suggestion.addEventListener('click', function () {
+      searchInput.value = suggestion.textContent;
+      getWeather(searchInput.value);
+      suggetionsList.style.display = 'none';
+    });
+  });
+  if (input === '') {
+    suggetionsList.innerHTML = '';
+  }
+});
