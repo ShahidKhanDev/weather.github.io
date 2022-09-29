@@ -89,9 +89,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   max-width: 20rem;
   width: 20rem;
   transition: 0.4s ease-in-out;
+  position: relative;
+}
+
+.header .right-header .search-wrapper .suggestions {
+  width: 100%;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+.header .right-header .search-wrapper .suggestions .suggestions-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.header
+  .right-header
+  .search-wrapper
+  .suggestions
+  .suggestions-list
+  .suggestion {
+  list-style-type: none;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.header
+  .right-header
+  .search-wrapper
+  .suggestions
+  .suggestions-list
+  .suggestion:not(:last-child) {
+  border-bottom: 1px solid #eeee;
+}
+
+mark {
+  font-weight: 700;
 }
 
 .header .right-header .search-wrapper .search-input {
@@ -422,7 +464,7 @@ body {
 
 @media (max-width: 570px) {
   .header .right-header .search-wrapper {
-    width: 2.5rem;
+    width: 4rem;
     transition: 0.4s ease-in-out;
   }
 

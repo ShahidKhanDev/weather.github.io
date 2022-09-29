@@ -46,13 +46,17 @@
             <i class="clear ri-close-line"></i>
             <i class="search ri-search-line"></i>
           </div>
+
+          <div class="suggestions">
+            <ul class="suggestions-list"></ul>
+          </div>
         </div>
       </div>
     </header>
     <!-- header ends -->
 
-    <!-- sidebar starts -->
     <div class="container">
+      <!-- sidebar starts -->
       <div class="sidebar">
         <div class="top-side">
           <li class="link-item active">
@@ -100,7 +104,9 @@
           </li>
         </div>
       </div>
+      <!-- sidebar ends -->
 
+      <!-- main starts -->
       <div class="main">
         <div class="weather-details">
           <h2 class="city"></h2>
@@ -124,23 +130,21 @@
           </div>
         </div>
       </div>
+      <!-- main ends -->
     </div>
 
+    <!-- error message starts -->
     <div class="error-container">
       <span class="error-message">City not found!</span>
       <button class="ok-btn">Ok</button>
     </div>
+    <!-- error message ends -->
 
-    <!-- <div class="sound-container"> -->
     <div class="sound">
-      <!-- <i class="sound-icon ri-volume-down-fill"></i> -->
       <i class="material-icons volume-off" style="display: block">volume_off</i>
       <i class="material-icons volume-on" style="display: none">volume_up</i>
       <span class="sound-text">Sound Off</span>
     </div>
-    <!-- </div> -->
-
-    <!-- sidebar ends -->
 
     <script type="module" src="app.js"></script>
   </body>
